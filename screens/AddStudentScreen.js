@@ -18,13 +18,13 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const BASE_URL = 'https://quranapp-c8c91-default-rtdb.firebaseio.com/';
 
-const SignUp = ({ navigation }) => {
+const AddStudentScreen = ({ navigation }) => {
   const [loading, setLoading] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const SignUpSchema = Yup.object().shape({
+  const AddSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),  // Validation for name
     email: Yup.string().email('Invalid email').required('Email is required'),
     password: Yup.string()
@@ -37,7 +37,7 @@ const SignUp = ({ navigation }) => {
     city: Yup.string().required('City is required'),
   });
 
-  const handleSignUp = async (values) => {
+  const handleAddStudent = async (values) => {
     const { name, email, password, contact, country, city } = values;
     setLoading(true);
 
@@ -63,13 +63,13 @@ const SignUp = ({ navigation }) => {
   };
 
   return (
-    <ImageBackground source={require('../assets/background.png')} style={styles.background} resizeMode="cover">
+    <ImageBackground source={require('./Home.png')} style={styles.background} resizeMode="cover">
       <View style={styles.container}>
-        <Text style={styles.header}>Sign Up</Text>
+        <Text style={styles.header}>Add Student</Text>
         <Formik
           initialValues={{ name: '', email: '', password: '', contact: '', country: '', city: '' }}
-          validationSchema={SignUpSchema}
-          onSubmit={handleSignUp}
+          validationSchema={AddSchema}
+          onSubmit={handleAddStudent}
         >
           {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
             <View>
@@ -131,7 +131,7 @@ const SignUp = ({ navigation }) => {
               {touched.city && errors.city && <Text style={styles.errorText}>{errors.city}</Text>}
 
               <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-                {loading ? <ActivityIndicator color="#FFF" /> : <Text style={styles.buttonText}>Sign Up</Text>}
+                {loading ? <ActivityIndicator color="#FFF" /> : <Text style={styles.buttonText}>Add Student</Text>}
               </TouchableOpacity>
             </View>
           )}
@@ -184,16 +184,12 @@ const styles = StyleSheet.create({
   },
   errorText: { fontSize: 12, color: 'red' },
   button: {
-    backgroundColor: '#FFD54F',
+    backgroundColor: '#28a745',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
   },
-<<<<<<< HEAD
-  buttonText: { color: 'black', fontSize: 16, fontWeight: 'bold' },
-=======
-  buttonText: { color: 'black', fontSize: 16,  },
->>>>>>> f17558422c21bbd46fb3571337437d113885abea
+  buttonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
   modalOverlay: {
     flex: 1,
     justifyContent: 'center',
@@ -219,4 +215,4 @@ const styles = StyleSheet.create({
   icon: { marginBottom: 10 },
 });
 
-export default SignUp;
+export default AddStudentScreen;
