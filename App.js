@@ -73,7 +73,7 @@ const AppNavigator = () => {
               component={TranslationDetails}
               options={{
                 drawerItemStyle: { display: 'none' },
-              }}
+              }}       
             />
               <Drawer.Screen
               name="ClassForm"

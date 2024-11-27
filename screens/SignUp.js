@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     alignItems: 'center',
   },
-  buttonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
+  buttonText: { color: 'black', fontSize: 16, fontWeight: 'bold' },
   modalOverlay: {
     flex: 1,
     justifyContent: 'center',

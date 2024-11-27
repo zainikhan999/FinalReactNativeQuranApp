@@ -58,7 +58,6 @@ const Delete = ({ navigation }) => {
         }
   
         // Show success message
-        Alert.alert('Account Deleted', 'Your account and all associated registrations have been deleted successfully.');
         navigation.replace('Login'); // Navigate to login screen
       } else {
         setWarning('No user logged in. Please login first.');
@@ -108,6 +107,11 @@ const Delete = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   containerMain: {
     flex: 1,
     justifyContent: 'center',
