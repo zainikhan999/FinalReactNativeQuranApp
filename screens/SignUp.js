@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import {
   View,
@@ -186,12 +184,12 @@ const styles = StyleSheet.create({
   },
   errorText: { fontSize: 12, color: 'red' },
   button: {
-    backgroundColor: '#28a745',
+    backgroundColor: '#FFD54F',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
   },
-  buttonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
+  buttonText: { color: 'black', fontSize: 16,  },
   modalOverlay: {
     flex: 1,
     justifyContent: 'center',
@@ -217,5 +215,4 @@ const styles = StyleSheet.create({
   icon: { marginBottom: 10 },
 });
 
-export default SignUp;
-
+export default SignUp;

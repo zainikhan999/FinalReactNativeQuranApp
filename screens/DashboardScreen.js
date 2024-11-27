@@ -19,8 +19,8 @@ const DashboardScreen = ({ navigation }) => {
           <Text style={styles.buttonText}>Update Student</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ViewStudents')}>
-          <Text style={styles.buttonText}>View Students</Text>
-        </TouchableOpacity>
+        <Text style={styles.buttonText}>View Students</Text>
+       </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('AddClass')}>
           <Text style={styles.buttonText}>Add Class</Text>
         </TouchableOpacity>
