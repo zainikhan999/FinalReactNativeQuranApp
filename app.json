@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "my-app",
+    "slug": "my-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": null,
+    "userInterfaceStyle": "light",
+    "sdkVersion": "52.0.0",
+   
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/background.png",
+        "backgroundColor": null
+      }
+    },
+    "web": {
+      "favicon": null
+    }
+  }
+}
