@@ -15,6 +15,7 @@ The admin can Add , update and View a student.
 The admin can Add a class , delete a class and update it.
 <br>
 Git Hub Repo Link : **https://github.com/zainikhan999/FinalReactNativeQuranApp**
+<br>
 Following were the group members:
 <br>
 **Laiba Gul - 55740**
